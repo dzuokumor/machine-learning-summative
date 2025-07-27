@@ -10,7 +10,10 @@ Using machine learning, this solution predicts travel time based on distance, co
 
 The goal: **help citizens and city planners make better travel decisions and optimize route planning**.
 
----
+**Dataset Description & Source**  
+The dataset contains structured records of travel routes between Nigerian states, with features like distance, congestion level, weather, road conditions, and estimated travel time. It was originally designed to train a Random Forest-based Traffic Advisory System using realistic data sourced via the GraphHopper API.  
+**Source:** [Nigerian States Travel Data – Kaggle](https://www.kaggle.com/datasets/vektur/nigerian-states-travel-data)
+
 
 ## Public API
 
