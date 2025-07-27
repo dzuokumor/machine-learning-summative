@@ -216,34 +216,56 @@ class _PredictionPageState extends State<PredictionPage>
   ];
 
   final List<Map<String, dynamic>> _cityOptions = [
-    {'name': 'Ibadan', 'distance': 140},
-    {'name': 'Benin City', 'distance': 320},
-    {'name': 'Akure', 'distance': 250},
-    {'name': 'Abeokuta', 'distance': 90},
-    {'name': 'Ilorin', 'distance': 310},
-    {'name': 'Ondo', 'distance': 230},
-    {'name': 'Oyo', 'distance': 150},
-    {'name': 'Ado-Ekiti', 'distance': 310},
-    {'name': 'Osogbo', 'distance': 230},
-    {'name': 'Ijebu Ode', 'distance': 110},
-    {'name': 'Akoko', 'distance': 280},
-    {'name': 'Port Harcourt', 'distance': 620},
-    {'name': 'Enugu', 'distance': 560},
-    {'name': 'Warri', 'distance': 400},
-    {'name': 'Calabar', 'distance': 810},
-    {'name': 'Uyo', 'distance': 700},
-    {'name': 'Kaduna', 'distance': 772},
-    {'name': 'Abuja', 'distance': 760},
-    {'name': 'Jos', 'distance': 740},
-    {'name': 'Lokoja', 'distance': 430},
-    {'name': 'Minna', 'distance': 530},
-    {'name': 'Saki', 'distance': 220},
-    {'name': 'Ikare', 'distance': 370},
-    {'name': 'Ife', 'distance': 200},
-    {'name': 'Sokoto', 'distance': 1030},
-    {'name': 'Kano', 'distance': 985},
-    {'name': 'Lagos', 'distance': 0},
-  ];
+    {"name": "Abeokuta", "distance": 90},
+    {"name": "Ibadan", "distance": 140},
+    {"name": "Ijebu Ode", "distance": 110},
+    {"name": "Oyo", "distance": 150},
+    {"name": "Osogbo", "distance": 230},
+    {"name": "Ondo", "distance": 230},
+    {"name": "Akure", "distance": 250},
+    {"name": "Ife", "distance": 200},
+    {"name": "Ado-Ekiti", "distance": 310},
+    {"name": "Ilorin", "distance": 310},
+    {"name": "Benin City", "distance": 320},
+    {"name": "Warri", "distance": 400},
+    {"name": "Asaba", "distance": 500},
+    {"name": "Lokoja", "distance": 430},
+    {"name": "Port Harcourt", "distance": 620},
+    {"name": "Enugu", "distance": 560},
+    {"name": "Owerri", "distance": 540},
+    {"name": "Onitsha", "distance": 500},
+    {"name": "Aba", "distance": 570},
+    {"name": "Calabar", "distance": 810},
+    {"name": "Uyo", "distance": 700},
+    {"name": "Yenagoa", "distance": 530},
+    {"name": "Makurdi", "distance": 820},
+    {"name": "Jos", "distance": 740},
+    {"name": "Kaduna", "distance": 772},
+    {"name": "Abuja", "distance": 760},
+    {"name": "Minna", "distance": 530},
+    {"name": "Kano", "distance": 985},
+    {"name": "Sokoto", "distance": 1030},
+    {"name": "Zaria", "distance": 820},
+    {"name": "Maiduguri", "distance": 1450},
+    {"name": "Yola", "distance": 1250},
+    {"name": "Gombe", "distance": 1180},
+    {"name": "Bauchi", "distance": 1020},
+    {"name": "Damaturu", "distance": 1320},
+    {"name": "Gusau", "distance": 1030},
+    {"name": "Birnin Kebbi", "distance": 1050},
+    {"name": "Dutse", "distance": 1020},
+    {"name": "Katsina", "distance": 1080},
+    {"name": "Lafia", "distance": 820},
+    {"name": "Umuahia", "distance": 580},
+    {"name": "Abakaliki", "distance": 610},
+    {"name": "Awka", "distance": 500},
+    {"name": "Jalingo", "distance": 1280},
+    {"name": "Katsina Ala", "distance": 900},
+    {"name": "Kontagora", "distance": 650},
+    {"name": "Saki", "distance": 220},
+    {"name": "Ikare", "distance": 370},
+    {"name": "Akoko", "distance": 280}
+];
 
   @override
   void initState() {
@@ -459,7 +481,7 @@ class _PredictionPageState extends State<PredictionPage>
             ),
             const SizedBox(width: 12),
             const Text(
-              'Destination City',
+              'City',
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
@@ -490,7 +512,7 @@ class _PredictionPageState extends State<PredictionPage>
             decoration: const InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-              hintText: 'Choose your destination',
+              hintText: 'Choose your city',
               hintStyle: TextStyle(color: Colors.grey),
             ),
             dropdownColor: Colors.white,
@@ -540,7 +562,7 @@ class _PredictionPageState extends State<PredictionPage>
             decoration: const InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-              hintText: 'Enter distance (150-1100 km)',
+              hintText: 'Enter distance (80-3000 km)',
               hintStyle: TextStyle(color: Colors.grey),
             ),
             keyboardType: TextInputType.number,
@@ -553,8 +575,8 @@ class _PredictionPageState extends State<PredictionPage>
               if (numValue == null) {
                 return 'Please enter a valid number';
               }
-              if (numValue < 150 || numValue > 1100) {
-                return 'Must be between 150-1100 km';
+              if (numValue < 80 || numValue > 3000) {
+                return 'Must be between 80-3000 km';
               }
               return null;
             },
