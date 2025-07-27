@@ -41,7 +41,7 @@ Use the Swagger UI to test predictions directly in the browser:
 ## Demo Video
 
 YouTube demo (≤ 5 min):  
-(to be filled)
+[Demo Video](https://youtu.be/R0edFghd1gQ)
 
 ## Mobile App
 
