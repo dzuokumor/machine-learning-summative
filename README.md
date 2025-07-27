@@ -52,7 +52,7 @@ A Flutter mobile app is provided for a user-friendly interface.
 2. Clone the repository:
    ```bash
    git clone https://github.com/dzuokumor/machine-learning-summative.git
-   cd machine-learning-summative/mobile_app
+   cd machine-learning-summative/machine_learning_summative_flutter_app
    ```
 
 3. Get packages:
