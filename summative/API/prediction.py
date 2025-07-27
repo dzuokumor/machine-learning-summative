@@ -38,6 +38,9 @@ def predict_travel_time(data: TravelInput):
         data.congestion_level
     ]], columns=['Road Length (km)', 'Weather', 'direction', 'Congestion Level'])
 
+    input_df['sqrt_distance'] = input_df['Road Length (km)'] ** 0.5
+    input_df['distance_weather'] = input_df['Road Length (km)'] * input_df['Weather'] / 4
+
     scaled_features = scaler.transform(input_df)
     prediction = model.predict(scaled_features)[0]
 
