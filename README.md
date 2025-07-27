@@ -85,6 +85,6 @@ A Flutter mobile app is provided for a user-friendly interface.
 
 ## Features
 
-- 27 Nigerian cities supported
+- 48 Nigerian cities supported
 - Real-time predictions using a machine learning backend
 - Swagger-based API for external testing
